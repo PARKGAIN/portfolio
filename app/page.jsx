@@ -1,5 +1,22 @@
-import "./globals.css";
+"use client";
+import React from "react";
+import { Noto_Sans_KR } from "@next/font/google";
+import { ThemeProvider } from "next-themes";
+import Navbar from "../components/Navbar";
 
-export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello!</h1>;
+const noto_sans_kr = Noto_Sans_KR({
+  weight: ["500"],
+});
+
+function Page() {
+  return (
+    <ThemeProvider attribute="class">
+      <Navbar />
+      <div className={noto_sans_kr}>
+        Frontend Developer <br /> PARK GA IN
+      </div>
+    </ThemeProvider>
+  );
 }
+
+export default Page;
