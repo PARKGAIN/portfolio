@@ -2,19 +2,19 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeSwitch from "./ThemeSwitch";
-
+import Image from "next/image";
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Portfolio", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "About", href: "/about", current: false },
+  { name: "Portfolio", href: "/portfolio", current: false },
+  { name: "Contact", href: "/contact", current: false },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Navbar({ visibility }) {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -33,8 +33,8 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  {/* image */}
+                <div className="flex items-center">
+                  <Image src="/logo.png" alt="logo" width={40} height={40} />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -124,7 +124,7 @@ export default function Navbar() {
                     </Menu.Items>
                   </Transition>
                 </Menu>
-                <ThemeSwitch />
+                {visibility && <ThemeSwitch />}
               </div>
             </div>
           </div>
