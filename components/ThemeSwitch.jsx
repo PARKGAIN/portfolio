@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -17,7 +16,6 @@ const ThemeSwitch = () => {
 
   return (
     <>
-      <FontAwesomeIcon icon={faMoon} />
       <select value={theme} onChange={(e) => setTheme(e.target.value)}>
         <option value="system">System</option>
         <option value="dark">Dark</option>

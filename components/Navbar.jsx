@@ -14,7 +14,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar({ visibility }) {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -63,8 +63,6 @@ export default function Navbar({ visibility }) {
                 >
                   <span className="sr-only">View notifications</span>
                 </button>
-
-                {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -124,7 +122,7 @@ export default function Navbar({ visibility }) {
                     </Menu.Items>
                   </Transition>
                 </Menu>
-                {visibility && <ThemeSwitch />}
+                <ThemeSwitch />
               </div>
             </div>
           </div>

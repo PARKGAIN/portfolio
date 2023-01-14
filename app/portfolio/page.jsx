@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
 import Navbar from "../../components/Navbar";
+import CardView from "../../components/CardView";
 
 function page() {
   return (
     <div>
       <Navbar />
-      page
+      <CardView />
     </div>
   );
 }
