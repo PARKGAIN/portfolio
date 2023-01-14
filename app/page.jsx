@@ -9,7 +9,7 @@ function Page() {
     <div>
       <ThemeProvider attribute="class">
         <Navbar />
-        {[0, 1, 2].map((index) => (
+        {[0, 1, 2, 3].map((index) => (
           <MainLetter key={index} index={index} />
         ))}
       </ThemeProvider>
