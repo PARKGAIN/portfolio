@@ -28,12 +28,14 @@ export const ContactUs = () => {
         className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         type="text"
         name="user_name"
+        placeholder="please write your name"
       />
       <label>Email</label>
       <input
         className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         type="email"
         name="user_email"
+        placeholder="please write your email"
       />
       <label>Message</label>
       <textarea
