@@ -14,7 +14,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Navbar({ visibility }) {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -67,7 +67,6 @@ export default function Navbar() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      {/* image */}
                     </Menu.Button>
                   </div>
                   <Transition
@@ -122,7 +121,7 @@ export default function Navbar() {
                     </Menu.Items>
                   </Transition>
                 </Menu>
-                <ThemeSwitch />
+                {visibility && <ThemeSwitch />}
               </div>
             </div>
           </div>

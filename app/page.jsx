@@ -3,15 +3,13 @@ import React from "react";
 import { ThemeProvider } from "next-themes";
 import Navbar from "../components/Navbar";
 import MainLetter from "../components/MainLetter";
-
+import { visibility } from "../context/context";
 function Page() {
   return (
     <div>
       <ThemeProvider attribute="class">
-        <Navbar />
-        {[0, 1, 2, 3].map((index) => (
-          <MainLetter key={index} index={index} />
-        ))}
+        <Navbar visibility={visibility} />
+        <MainLetter />
       </ThemeProvider>
     </div>
   );

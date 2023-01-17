@@ -16,12 +16,19 @@ const callouts = [
     href: "https://github.com/PARKGAIN/board",
   },
   {
-    name: "To Do page",
-    description: "html, css, javascript로 만든 todo 페이지 ",
-    imageSrc: "/todo.png",
-    imageAlt: "todo_img",
-    href: "https://github.com/PARKGAIN/simple_to_do",
+    name: "login",
+    description: "React, Recoil로 만든 로그인 페이지 ",
+    imageSrc: "/login.png",
+    imageAlt: "login_img",
+    href: "https://github.com/PARKGAIN/login",
   },
+  // {
+  //   name: "login",
+  //   description: "React, Recoil로 만든 로그인 페이지 ",
+  //   imageSrc: "/login.png",
+  //   imageAlt: "login_img",
+  //   href: "https://github.com/PARKGAIN/login",
+  // },
 ];
 function CardView() {
   return (

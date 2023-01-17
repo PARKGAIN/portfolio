@@ -2,21 +2,19 @@
 import React, { useState, useRef } from "react";
 import font from "../fonts/font";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
-function MainLetter({ index }) {
-  const [text, setText] = useState([
-    "안녕하세요",
-    "트로트엔 송가인",
-    "연예인 한가인",
-    "저는 개발하는 박가인입니다",
-  ]);
+function MainLetter() {
+  const [text, setText] = useTypewriter({
+    words: ["안녕하세요", "신입 프론트엔드 개발자", "박가인입니다"],
+    loop: false,
+    delaySpeed: 1500,
+  });
 
   return (
-    <div>
-      <motion.div className={`${font} text-4xl text-center center `}>
-        <br />
-        {text[index]}
-      </motion.div>
+    <div className="m-auto table mt-52">
+      <span className={`${font} text-4xl text-center center `}>{text}</span>
+      <Cursor cursorColor="blue text-4xl" />
     </div>
   );
 }
