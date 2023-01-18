@@ -12,7 +12,7 @@ function MainLetter() {
   });
 
   return (
-    <div className="m-auto table mt-52">
+    <div className="m-auto table mt-72">
       <span className={`${font} text-4xl text-center center `}>{text}</span>
       <Cursor cursorColor="blue text-4xl" />
     </div>

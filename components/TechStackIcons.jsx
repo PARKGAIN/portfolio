@@ -8,12 +8,27 @@ import {
 } from "react-icons/di";
 function TechStackIcons() {
   return (
-    <div className="flex">
-      <DiReact size={100} />
-      <DiJavascript1 size={100} />
-      <DiNodejsSmall size={100} />
-      <DiMysql size={100} />
-      <DiLinux size={100} />
+    <div className="flex place-content-center">
+      <div>
+        <DiJavascript1 size={100} />
+        <h3 className="text-center">Javascript</h3>
+      </div>
+      <div>
+        <DiReact size={100} />
+        <h3 className="text-center">React</h3>
+      </div>
+      <div>
+        <DiNodejsSmall size={100} />
+        <h3 className="text-center">Node.js</h3>
+      </div>
+      <div>
+        <DiMysql size={100} />
+        <h3 className="text-center"> MySQL</h3>
+      </div>
+      <div>
+        <DiLinux size={100} />
+        <h3 className="text-center"> Linux</h3>
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeSwitch from "./ThemeSwitch";
 import Image from "next/image";
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Portfolio", href: "/portfolio", current: false },
   { name: "Contact", href: "/contact", current: false },

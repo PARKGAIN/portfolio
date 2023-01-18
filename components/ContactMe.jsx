@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export const ContactUs = () => {
+export const ContactMe = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -19,7 +19,7 @@ export const ContactUs = () => {
 
   return (
     <form
-      className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-6/12"
+      className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       ref={form}
       onSubmit={sendEmail}
     >
