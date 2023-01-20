@@ -12,9 +12,18 @@ function Page() {
     <div>
       <ThemeProvider attribute="class">
         <Navbar visibility={visibility} />
-        <Image src="/profile.png" alt="myprofileimg" width={200} height={300} />
+        <h3 className="text-2xl uppercase top-24 text-gray-500 text-center mb-12 mt-6">
+          About
+        </h3>
+        <Image
+          src="/profile.png"
+          alt="myprofileimg"
+          width={200}
+          height={300}
+          className="mb-20 w-56 h-56 rounded-full object-cover md:rounded-lg m-auto"
+        />
         <AboutTxt />
-        <h3 className="text-center">기술스택</h3>
+        <h3 className="text-center mb-1">기술스택</h3>
         <TechStackIcons />
       </ThemeProvider>
     </div>

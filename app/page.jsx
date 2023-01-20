@@ -12,8 +12,8 @@ function Page() {
       <ThemeProvider attribute="class">
         <Navbar visibility={visibility} />
         <MainLetter />
-        {/* <Btn /> */}
         <Contact />
+        <Btn />
       </ThemeProvider>
     </div>
   );

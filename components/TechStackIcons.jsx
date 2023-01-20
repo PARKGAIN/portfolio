@@ -8,7 +8,7 @@ import {
 } from "react-icons/di";
 function TechStackIcons() {
   return (
-    <div className="flex place-content-center">
+    <div className="flex place-content-center mb-16">
       <div>
         <DiJavascript1 size={100} />
         <h3 className="text-center">Javascript</h3>

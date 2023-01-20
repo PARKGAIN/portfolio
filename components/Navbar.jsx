@@ -5,7 +5,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import Image from "next/image";
 import { NavLink } from "next/link";
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Portfolio", href: "/portfolio", current: false },
 ];
@@ -133,3 +133,9 @@ export default function Navbar({ visibility }) {
     </Disclosure>
   );
 }
+
+//classNames(
+//  item.current
+//   ? "bg-gray-900 text-white"
+//   : "text-gray-300 hover:bg-gray-700 hover:text-white",
+// "px-3 py-2 rounded-md text-sm font-medium"
