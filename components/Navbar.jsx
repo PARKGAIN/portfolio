@@ -3,11 +3,11 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeSwitch from "./ThemeSwitch";
 import Image from "next/image";
+import { NavLink } from "next/link";
 const navigation = [
-  { name: "Home", href: "/", current: false },
+  { name: "Home", href: "/", current: true },
   { name: "About", href: "/about", current: false },
   { name: "Portfolio", href: "/portfolio", current: false },
-  { name: "Contact", href: "/contact", current: false },
 ];
 
 function classNames(...classes) {
@@ -81,15 +81,12 @@ export default function Navbar({ visibility }) {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
-                          >
-                            Your Profile
-                          </a>
+                          ></NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>
@@ -100,22 +97,7 @@ export default function Navbar({ visibility }) {
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Sign out
-                          </a>
+                          ></a>
                         )}
                       </Menu.Item>
                     </Menu.Items>

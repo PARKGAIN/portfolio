@@ -5,7 +5,6 @@ import CardView from "../../components/CardView";
 import { ThemeProvider } from "next-themes";
 import { visibility } from "../../context/context";
 function Page() {
-  const [themeSwitchVisibility, setThemeSwitchVisibility] = useState(true);
   return (
     <div>
       <ThemeProvider attribute="class">

@@ -6,7 +6,8 @@
     "dev": "cross-env next dev -p 8000",
     "build": "next build",
     "start": "cross-env next start -p 8000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-deploy": "next build && next export"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",

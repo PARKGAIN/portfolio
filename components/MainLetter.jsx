@@ -6,7 +6,11 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 function MainLetter() {
   const [text, setText] = useTypewriter({
-    words: ["안녕하세요", "신입 프론트엔드 개발자", "박가인입니다"],
+    words: [
+      "트로트 가수 송가인",
+      "연기자 한가인",
+      "저는 이들과 어깨를 나란히 하고싶은 개발자 박가인입니다",
+    ],
     loop: false,
     delaySpeed: 1500,
   });
