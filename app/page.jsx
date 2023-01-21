@@ -4,16 +4,18 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "../components/Navbar";
 import MainLetter from "../components/MainLetter";
 import { visibility } from "../context/context";
-import Btn from "../components/Btn";
+
 import Contact from "../components/Contact";
+import Snowfall from "react-snowfall";
+React.useLayoutEffect = React.useEffect;
 function Page() {
   return (
     <div>
       <ThemeProvider attribute="class">
         <Navbar visibility={visibility} />
+        <Snowfall />
         <MainLetter />
         <Contact />
-        <Btn />
       </ThemeProvider>
     </div>
   );

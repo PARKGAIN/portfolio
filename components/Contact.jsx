@@ -5,9 +5,8 @@ import { goUrl } from "../utils/goUrl";
 import { DiGithubBadge } from "react-icons/di";
 function Contact() {
   return (
-    <div className="mt-12">
+    <div className="mt-72">
       <div className="m-auto table">
-        <h2 className="mb-12 text-center text-xl">☎ contact ☎</h2>
         <div className="flex">
           <div className="mr-7 hover:text-blue-400">
             <span className="w-12 h-12 inline-flex items-center justify-center bg-neutral-300 rounded-full ">
