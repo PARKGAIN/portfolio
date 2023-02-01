@@ -31,5 +31,8 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
+  },
+  "solutions": {
+    "got": "^12.1.0"
   }
 }
