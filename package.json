@@ -19,7 +19,7 @@
     "eslint-config-next": "13.0.5",
     "font-awesome": "^4.7.0",
     "glob-parent": "^6.0.2",
-    "got": "^12.5.3",
+    "got": "^11.8.5",
     "next": "13.0.5",
     "next-themes": "^0.2.1",
     "prop-types": "^15.8.1",
