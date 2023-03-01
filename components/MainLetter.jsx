@@ -6,11 +6,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 function MainLetter() {
   const text = "Hi, I am Ga In~🖐";
 
-  const [name, setName] = useTypewriter({
-    words: ["송가인, 한가인 ,박가인", "let's go"],
-    delaySpeed: 1000,
-    loop: 1,
-  });
+  const name = "현재 홈페이지 개편 작업중입니다...🔨"
 
   return (
     <div className="m-auto table mt-72">
