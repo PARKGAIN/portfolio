@@ -4,32 +4,40 @@ import Link from "next/link";
 const callouts = [
   {
     name: "sg blog",
-    description: "React, Node.js 로 만든 블로그",
+    description: "",
+    techStack: "React, Node.js",
+    reference: "",
     imageSrc: "/sg_blog.png",
     imageAlt: "blog_img",
     href: "https://github.com/PARKGAIN/sg_blog",
   },
   {
     name: "board",
-    description: "React, Spring boot로 만든 게시판",
+    description: "",
+    techStack: "React, Spring boot",
+    reference: "",
     imageSrc: "/board.png",
     imageAlt: "board_img",
     href: "https://github.com/PARKGAIN/board",
   },
   {
     name: "login",
-    description: "React, Recoil로 만든 로그인 페이지 ",
+    description: "",
+    techStack: "React, Recoil",
+    reference: "",
     imageSrc: "/login.png",
     imageAlt: "login_img",
     href: "https://github.com/PARKGAIN/login",
   },
-  // {
-  //   name: "login",
-  //   description: "React, Recoil로 만든 로그인 페이지 ",
-  //   imageSrc: "/login.png",
-  //   imageAlt: "login_img",
-  //   href: "https://github.com/PARKGAIN/login",
-  // },
+   {
+     name: "slack-clone",
+     description: "",
+     techStack: "React",
+     reference: "",
+     imageSrc: "/slack.png",
+     imageAlt: "slack_img",
+     href: "https://github.com/sgdevcamp2022/coderunner",
+   },
 ];
 function CardView() {
   return (
@@ -61,6 +69,12 @@ function CardView() {
                 <p className="text-base font-semibold text-gray-900">
                   {callout.description}
                 </p>
+                <div className="text-base font-semibold text-gray-900">
+                  {callout.techStack}
+                </div>
+                <div className="text-base font-semibold text-gray-900">
+                  {callout.reference}
+                </div>
               </div>
             ))}
           </div>

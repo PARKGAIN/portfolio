@@ -7,7 +7,6 @@ import { NavLink } from "next/link";
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
-  { name: "Portfolio", href: "/portfolio", current: false },
 ];
 
 function classNames(...classes) {
