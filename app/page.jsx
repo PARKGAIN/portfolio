@@ -9,10 +9,8 @@ React.useLayoutEffect = React.useEffect;
 function Page() {
   return (
     <div>
-      <ThemeProvider attribute="class">
         <Navbar visibility={visibility} />
         <CardView/>
-      </ThemeProvider>
     </div>
   );
 }
