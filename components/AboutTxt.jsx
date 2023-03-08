@@ -1,10 +1,10 @@
 import React from "react";
-import { noto_sans_korean } from "../fonts/font";
+
 
 function AboutTxt() {
   return (
     <div className="w-7/12 m-auto mb-16">
-      <p className={`${noto_sans_korean.className} leading-relaxed text-lg`}>
+      <p className={`leading-relaxed text-lg`}>
         다국적 기술 기업 Alibaba Group (알리바바 그룹) 의 공동 창립자인 마윈은
         알리바바 창립 전에 영어교사를 그만 두고 미국에 가서 인터넷을 접한 뒤,
         인터넷의 잠재력을 알게 되고 중국으로 돌아오자마자 친구와 함께 웹사이트를
