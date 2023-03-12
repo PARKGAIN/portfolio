@@ -8,8 +8,8 @@ import Script from "next/script";
 function Page() {
   return (
     <div>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-36GQRC58RX"/>
-      <Script id="google-analytics">  
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-36GQRC58RX"/>
+      <Script strategy="afterInteractive">  
       {`
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
