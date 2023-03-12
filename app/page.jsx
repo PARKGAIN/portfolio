@@ -14,14 +14,11 @@ function Page() {
     <div>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-36GQRC58RX"/>
       <Script strategy="afterInteractive">  
-      {`
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){dataLayer.push(arguments)}
       gtag('js', new Date());
 
       gtag('config', 'G-36GQRC58RX');
-      `
-      }
       </Script>
       <ThemeProvider attribute="class">
         <Navbar visibility={visibility} />
