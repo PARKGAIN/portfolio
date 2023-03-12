@@ -3,10 +3,22 @@ import React from "react";
 import CardView from "../components/CardView";
 import ScrollspyNav from "react-scrollspy-nav";
 React.useLayoutEffect = React.useEffect;
+import Script from 'next/script'
 
 function Page() {
   return (
     <div>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-36GQRC58RX"/>
+      <Script id="google-analytics">  
+      {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-36GQRC58RX');
+      `
+      }
+      </Script>
       <ScrollspyNav
         scrollTargetIds={["section_1", "section_2", "section_3"]}
         offset={100}
