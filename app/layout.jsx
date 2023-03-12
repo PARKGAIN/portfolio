@@ -14,6 +14,14 @@ export default function RootLayout({ children }) {
       noindex={true}
       useAppDir={true}
     />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-36GQRC58RX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
+
+      gtag('config', 'G-36GQRC58RX');
+    </script>
       <head />
       <body>{children}</body>
     </html>
