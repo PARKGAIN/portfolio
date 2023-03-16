@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-        <NextSeo
+      <NextSeo
       title="parkgain portfolio"
       description="frontend developer parkgain portfolio"
       noindex={true}
