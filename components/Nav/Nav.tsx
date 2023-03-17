@@ -1,10 +1,11 @@
 import React from 'react'
 import "../Nav/Nav.css"
+
 function Nav() {
   return (
     <div className='flex'>
-    <p data-to-scrollspy-id="first">Projects</p>
-    <p data-to-scrollspy-id="second">About</p>
+    <p data-to-scrollspy-id="projects" className='nav_item ml-5'>Projects</p>
+    <p data-to-scrollspy-id="about" className='nav_item'>About</p>
     </div>
  
   )
