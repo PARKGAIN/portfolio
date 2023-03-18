@@ -4,6 +4,8 @@ import Script from 'next/script'
 import ScrollSpy from "react-ui-scrollspy";
 import Nav from "../components/Nav/Nav";
 import Projects from "../components/Projects/Projects";
+import projects from "../data/projects"
+import About from "../components/About/About";
 
 function Page() {
   return (
@@ -23,10 +25,10 @@ function Page() {
       <Nav/>
       <ScrollSpy>
         <div id="projects">
-         <Projects/>
+         <Projects projects={projects}/>
         </div>
         <div id="about">
-          dkdkdkdkdkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+          <About/>
         </div>
       </ScrollSpy>
     </>
