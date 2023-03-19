@@ -5,7 +5,6 @@ import "../Projects/Projects.css"
 
 
 const Card = ({image,title,description,techstack,reference,cardStyle} : any) => {
-
     return (
       <div className={`card ${cardStyle}`}>
         <Image className='portfolio_img margin-auto' src={image} alt="프로젝트 이미지" width={400} height={230} />

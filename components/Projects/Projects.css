@@ -38,12 +38,5 @@
     margin-right: 30px;
 }
 
-.slide-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 50%;
-    z-index: 1;
-    cursor: pointer;
-  }
+
   
