@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "../Nav/Nav.css";
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
 
@@ -26,22 +26,22 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav>
-      <ul>
+    <div className="nav">
+      <ul className="flex">
         <li className={activeSection === "home" ? "active" : ""}>
           <a href="#home">Home</a>
         </li>
         <li className={activeSection === "about" ? "active" : ""}>
-          <a href="#about">About</a>
+          <a href="#about">Projects</a>
         </li>
         <li className={activeSection === "services" ? "active" : ""}>
-          <a href="#services">Services</a>
+          <a href="#services">About</a>
         </li>
         <li className={activeSection === "contact" ? "active" : ""}>
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };
 

@@ -29,12 +29,11 @@ const Page = () => {
       gtag('config', 'G-36GQRC58RX');
       `}
       </Script>
-      {/* 자기소개,작업물,기술스택,블로그,인증서,수료증 */}
       <div>
         <Nav />
       </div>
-      <section id="about" className="background flex">
-        <div className="card-container">
+      <section id="about" className="background">
+        <div className="card-container flex">
           <BiChevronLeft
             className="left slide-icons"
             onClick={slideLeft}
