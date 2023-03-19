@@ -26,3 +26,33 @@ a {
     background: black;
   }
 }
+
+.background-color{
+  background-color: #F7F7F8;
+}
+
+.flex{
+  display: flex;
+}
+
+.prevCard {
+  left: calc(0% + 2rem);
+  opacity: 0;
+}
+
+.activeCard {
+left: 50%;
+transform: translateX(-50%);
+}
+
+.nextCard {
+  left: 100%;
+  transform: translateX(calc(-100% - 2rem));
+  opacity: 0;
+}
+
+.card-container {
+  position: relative;
+  width: 36rem;
+  height: 22rem;
+}

@@ -1,4 +1,4 @@
-const projects = [
+const data = [
     {
         image: "/slack.png",
         title: "slack",
@@ -18,7 +18,7 @@ const projects = [
         title: "portfolio",
         description: "포트폴리오 목록을 보여주는 개인 프로젝트입니다. React로 개발했을 때 SEO 점수를 높이는데 한계가 있다는 것을 알고 Next.js 13버전으로 현재 이 사이트를 개발하였습니다.",
         techstack: "Next.js",
-        reference: "https://parkgain.tistory.com/54"
+        reference: "https://dev.to/siaust/make-your-own-html-carousel-in-react-177k, https://parkgain.tistory.com/54"
     },
     { 
         image: "/login.png",       
@@ -35,4 +35,4 @@ const projects = [
         reference: "https://parkgain.tistory.com/25"
     },]
 
-export default projects;
+export default data;
