@@ -13,5 +13,14 @@
 .fixed{
     position: fixed;
 }
+.header{
+    justify-content: center;
+    max-width: 1070px;
+    margin: 0 auto;
+    color: #222;
+    font-size : 18px;
+}
 
-
+.background-color{
+    background-color: #F7F7F8;
+}

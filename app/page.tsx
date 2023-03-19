@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
 import Script from 'next/script'
-import ScrollSpy from "react-ui-scrollspy";
 import Nav from "../components/Nav/Nav";
 import Projects from "../components/Projects/Projects";
 import projects from "../data/projects"
@@ -22,15 +21,15 @@ function Page() {
       }
       </Script>
       {/* 자기소개,작업물,기술스택,블로그,인증서,수료증 */}
+      <div>
       <Nav/>
-      <ScrollSpy>
-        <div id="projects">
-         <Projects projects={projects}/>
-        </div>
-        <div id="about">
-          <About/>
-        </div>
-      </ScrollSpy>
+      </div>
+      <section id="about">
+        <Projects projects={projects}/>
+        </section>
+        <section id="services">
+        <About/>
+        </section>
     </>
   );
 }

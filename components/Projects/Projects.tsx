@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import "../Projects/Projects.css"
+import {open_sans,nanum_gothic} from "../../fonts/font"
 
 function Projects({projects} : any): JSX.Element {
   return (
@@ -9,11 +10,15 @@ function Projects({projects} : any): JSX.Element {
           {projects.map((e: string,i: number)=>{
               return(
               <div className='item_container' key={e}>
-                  <Image className='portfolio_img' src={projects[i].image} alt="프로젝트 이미지" width={400} height={230} />
+                  <Image className='portfolio_img margin-auto' src={projects[i].image} alt="프로젝트 이미지" width={400} height={230} />
+                  <br/>
                   <h3 className='line-height'>{projects[i].title}</h3>
-                  <div className='line-height'> 설명 : {projects[i].description}</div>
-                  <div className='line-height'>기술 스택 : {projects[i].techstack}</div>
-                  <div className='line-height'> 참고한 자료 : {projects[i].reference}</div>
+                  <br/>
+                  <div className={`line-height ${open_sans.className}`}> 설명 : {projects[i].description}</div>
+                  <br/>
+                  <div className={`line-height ${open_sans.className}`}>기술 스택 : {projects[i].techstack}</div>
+                  <br/>
+                  <div className={`line-height ${open_sans.className}`}> 참고한 자료 : {projects[i].reference}</div>
               </div>)})}   
               </div>
             </div>
