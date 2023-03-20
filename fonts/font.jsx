@@ -2,7 +2,7 @@ import { Nanum_Gothic, Open_Sans} from "@next/font/google";
 
 export const nanum_gothic = Nanum_Gothic({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["400"],
   fallback: ["system-ui", "arial"],
 });
 

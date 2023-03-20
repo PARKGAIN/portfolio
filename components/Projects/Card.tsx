@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { open_sans } from "../../fonts/font";
+import { goUrl } from "../../utils/goUrl";
+import { DiGithubBadge } from "react-icons/di";
 import "../Projects/Projects.css";
 
 const Card = ({
@@ -10,7 +12,8 @@ const Card = ({
   techstack,
   reference,
   cardStyle,
-}: any) => {
+  githublink,
+}: any): JSX.Element => {
   return (
     <div className={`card ${cardStyle}`}>
       <Image
@@ -22,15 +25,20 @@ const Card = ({
       />
       <h3 className="line-height">{title}</h3>
       <br />
-      <div className={`line-height ${open_sans.className}`}>
+      <div className={`line-height text ${open_sans.className}`}>
         설명 : {description}
       </div>
       <div className={`line-height ${open_sans.className}`}>
         기술 스택 : {techstack}
       </div>
       <div className={`line-height ${open_sans.className}`}>
-        참고한 자료 : {reference}
+        참고 자료 : {reference}
       </div>
+      <DiGithubBadge
+        size={30}
+        onClick={() => goUrl(`${githublink}`)}
+        className="cursor-pointer"
+      />
     </div>
   );
 };

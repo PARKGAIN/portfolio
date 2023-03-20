@@ -7,15 +7,20 @@ import data from "../data/projects";
 import About from "../components/About/About";
 import Card from "../components/Projects/Card";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import Contact from "../components/Contact/Contact";
 
 const Page = () => {
   const [index, setIndex] = useState(0);
   const slideLeft = () => {
-    setIndex(index - 1);
+    if (index - 1 >= 0) {
+      setIndex(index - 1);
+    }
   };
 
   const slideRight = () => {
-    setIndex(index + 1);
+    if (index + 1 <= data.length - 1) {
+      setIndex(index + 1);
+    }
   };
   return (
     <>
@@ -32,7 +37,7 @@ const Page = () => {
       <div>
         <Nav />
       </div>
-      <section id="about" className="background">
+      <section id="projects" className="background">
         <div className="card-container flex">
           <BiChevronLeft
             className="left slide-icons"
@@ -51,8 +56,11 @@ const Page = () => {
           />
         </div>
       </section>
-      <section id="services">
+      <section id="about">
         <About />
+      </section>
+      <section id="contact">
+        <Contact />
       </section>
     </>
   );

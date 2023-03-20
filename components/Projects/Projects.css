@@ -1,5 +1,6 @@
-.mb-10{
-    margin-bottom: 10px;
+.text{
+    word-spacing: 0.1em;
+    text-align: justify;
 }
 
 .center{
@@ -11,14 +12,6 @@
     margin: 0 auto;
 }
 
-.mt-5{
-    margin-top: 5px;
-}
-
-.mb-5{
-    margin-bottom: 5px;
-}
-
 .portfolio_img{
     margin-top: 30px;
     background: transparent;
@@ -27,6 +20,7 @@
 .line-height{
     line-height: 1.7;
 }
+
 .card{
     position: absolute;
     padding: 30px 20px 20px;
@@ -38,5 +32,8 @@
     margin-right: 30px;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
 
   
