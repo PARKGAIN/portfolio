@@ -1,6 +1,12 @@
 .text{
     word-spacing: 0.1em;
-    text-align: justify;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
 }
 
 .center{
@@ -35,5 +41,6 @@
 .cursor-pointer{
     cursor: pointer;
 }
+
 
   

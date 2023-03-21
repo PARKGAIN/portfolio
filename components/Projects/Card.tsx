@@ -23,16 +23,16 @@ const Card = ({
         width={400}
         height={230}
       />
-      <h3 className="line-height">{title}</h3>
+      <h3 className={`${open_sans.className}`}>{title}</h3>
       <br />
-      <div className={`line-height text ${open_sans.className}`}>
+      <div className={`line-height text mb-5 ${open_sans.className}`}>
         설명 : {description}
       </div>
-      <div className={`line-height ${open_sans.className}`}>
+      <div className={`mb-5 ${open_sans.className}`}>
         기술 스택 : {techstack}
       </div>
-      <div className={`line-height ${open_sans.className}`}>
-        참고 자료 : {reference}
+      <div className={`line-height text ${open_sans.className}`}>
+        참고자료 : {reference}
       </div>
       <DiGithubBadge
         size={30}
