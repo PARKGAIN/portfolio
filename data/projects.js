@@ -16,7 +16,7 @@ const data = [
         githublink: "https://github.com/PARKGAIN/sg_blog"
     },
     {   
-        image: "",
+        image: "/main-page.jpg",
         title: "portfolio",
         description: "포트폴리오 목록을 보여주는 개인 프로젝트입니다. React로 개발했을 때 SEO 점수를 높이는데 한계가 있다는 것을 알고 Next.js 13버전으로 현재 이 사이트를 개발하였습니다.",
         techstack: "Next.js",
