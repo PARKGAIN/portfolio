@@ -1,18 +1,24 @@
 .contact-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   height: 750px;
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 15%;
 }
 
-h1 {
-  font-size: 2.5rem;
+.contact-txt {
+  font-size: 1.2rem;
+}
+
+.mb-20 {
   margin-bottom: 20px;
 }
 
-p {
-  margin-bottom: 10px;
+.text-end{
+  text-align: end;
 }
 
+.mb-10{
+  margin-bottom: 10px;
+}
