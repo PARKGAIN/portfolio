@@ -19,7 +19,7 @@ const About = () => {
           alt="프로필이미지"
           className="about-img"
           width={530}
-          height={380}
+          height={370}
         />
       </div>
       <div className="width-100">
