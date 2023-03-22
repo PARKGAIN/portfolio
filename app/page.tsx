@@ -8,6 +8,7 @@ import About from "../components/About/About";
 import Card from "../components/Projects/Card";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Contact from "../components/Contact/Contact";
+import Head from "next/head";
 
 const Page = () => {
   const [index, setIndex] = useState(0);
@@ -24,6 +25,10 @@ const Page = () => {
   };
   return (
     <>
+      <Head>
+        <title>프론트엔드 개발자 박가인 포트폴리오</title>
+        <meta property="og:parkgain" content="프론트엔드 개발자 포트폴리오" />
+      </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-36GQRC58RX" />
       <Script id="google-analytics">
         {`
