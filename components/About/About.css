@@ -1,0 +1,31 @@
+.about-container {
+  height: 750px;
+  background-color: #f6f9fa;
+  display: flex;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-txt {
+  width: 79%;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.about-img {
+  margin-left: 15%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+h4:hover{
+  text-decoration: underline;
+  cursor: text;
+}
