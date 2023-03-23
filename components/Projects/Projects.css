@@ -21,6 +21,15 @@
 .portfolio_img{
     margin-top: 30px;
     background: transparent;
+    width: 400px;
+    height: 230px;
+}
+
+.mobile-portfolio_img {
+    margin-top: 15px;
+    background: transparent;
+    width: 200px;
+    height: 120px;
 }
 
 .line-height{
@@ -42,5 +51,15 @@
     cursor: pointer;
 }
 
+.mobile-card {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: visible;
+}
 
+.mobile-text {
+    font-size: 0.8rem !important;
+}
   

@@ -5,33 +5,58 @@ import { goUrl } from "../../utils/goUrl";
 import { DiGithubBadge } from "react-icons/di";
 import "../Projects/Projects.css";
 
-const Card = ({
-  image,
-  title,
-  description,
-  techstack,
-  reference,
-  cardStyle,
-  githublink,
-}: any): JSX.Element => {
+const Card = (
+  {
+    image,
+    title,
+    description,
+    techstack,
+    reference,
+    cardStyle,
+    githublink,
+  }: any,
+  { isMobile }: any
+): JSX.Element => {
   return (
-    <div className={`card ${cardStyle}`}>
+    <div
+      className={isMobile ? `mobile-card ${cardStyle}` : `card ${cardStyle}`}
+    >
       <Image
-        className="portfolio_img margin-auto"
+        className={
+          isMobile
+            ? "mobile-portfolio_img margin-auto"
+            : "portfolio_img margin-auto"
+        }
         src={image}
         alt="프로젝트 이미지"
-        width={400}
-        height={230}
       />
       <h3 className={`${open_sans.className}`}>{title}</h3>
       <br />
-      <div className={`line-height text mb-5 ${open_sans.className}`}>
+      <div
+        className={
+          isMobile
+            ? `line-height text mb-5 ${open_sans.className} mobile-text`
+            : `line-height text mb-5 ${open_sans.className}`
+        }
+      >
         설명 : {description}
       </div>
-      <div className={`mb-5 ${open_sans.className}`}>
+      <div
+        className={
+          isMobile
+            ? `mb-5 ${open_sans.className} mobile-text`
+            : `mb-5 ${open_sans.className}`
+        }
+      >
         기술 스택 : {techstack}
       </div>
-      <div className={`line-height text ${open_sans.className}`}>
+      <div
+        className={
+          isMobile
+            ? `line-height text ${open_sans.className} mobile-text`
+            : `line-height text ${open_sans.className}`
+        }
+      >
         참고자료 : {reference}
       </div>
       <DiGithubBadge

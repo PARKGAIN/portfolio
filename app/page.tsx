@@ -9,6 +9,7 @@ import Card from "../components/Projects/Card";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Contact from "../components/Contact/Contact";
 import Head from "next/head";
+import { useMediaQuery } from "react-responsive";
 
 const Page = () => {
   const [index, setIndex] = useState(0);
@@ -23,6 +24,11 @@ const Page = () => {
       setIndex(index + 1);
     }
   };
+
+  const isMobile: boolean = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
   return (
     <>
       <Head>
@@ -40,10 +46,14 @@ const Page = () => {
       `}
       </Script>
       <div>
-        <Nav />
+        <Nav isMobile={isMobile} />
       </div>
       <section id="projects" className="background">
-        <div className="card-container flex">
+        <div
+          className={
+            isMobile ? "mobile-card-container flex" : "card-container flex"
+          }
+        >
           <BiChevronLeft
             className="left slide-icons"
             onClick={slideLeft}
@@ -52,7 +62,7 @@ const Page = () => {
           {data.map((data, n) => {
             let position =
               n > index ? "nextCard" : n === index ? "activeCard" : "prevCard";
-            return <Card {...data} cardStyle={position} />;
+            return <Card {...data} isMobile={isMobile} cardStyle={position} />;
           })}
           <BiChevronRight
             className="right slide-icons"
@@ -62,10 +72,10 @@ const Page = () => {
         </div>
       </section>
       <section id="about">
-        <About />
+        <About isMobile={isMobile} />
       </section>
       <section id="contact">
-        <Contact />
+        <Contact isMobile={isMobile} />
       </section>
     </>
   );

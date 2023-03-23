@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Nav/Nav.css";
 
-const Nav = () => {
+const Nav = ({ isMobile }: any) => {
   const [activeSection, setActiveSection] = useState("");
 
   const handleScroll = () => {
@@ -30,16 +30,24 @@ const Nav = () => {
     <div className="nav_container">
       <ul className="flex">
         <li className={activeSection === "" ? "active" : ""}>
-          <a href="#">Home</a>
+          <a href="#" className={isMobile ? "mobile" : ""}>
+            Home
+          </a>
         </li>
         <li className={activeSection === "projects" ? "active" : ""}>
-          <a href="#projects">Projects</a>
+          <a href="#projects" className={isMobile ? "mobile" : ""}>
+            Projects
+          </a>
         </li>
         <li className={activeSection === "about" ? "active" : ""}>
-          <a href="#about">About</a>
+          <a href="#about" className={isMobile ? "mobile" : ""}>
+            About
+          </a>
         </li>
         <li className={activeSection === "contact" ? "active" : ""}>
-          <a href="#contact">Contact</a>
+          <a href="#contact" className={isMobile ? "mobile" : ""}>
+            Contact
+          </a>
         </li>
       </ul>
     </div>

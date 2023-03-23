@@ -31,3 +31,7 @@
     display: flex;
     justify-content: space-between;
 }
+
+.mobile{
+    font-size: 1rem !important;
+}

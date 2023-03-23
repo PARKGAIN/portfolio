@@ -10,20 +10,24 @@ import {
   DiMongodb,
 } from "react-icons/di";
 
-const About = () => {
+const About = ({ isMobile }: any) => {
   return (
     <div className="about-container">
       <div className="width-100">
         <Image
           src="/profile.jpg"
           alt="프로필이미지"
-          className="about-img"
-          width={530}
-          height={370}
+          className={isMobile ? "mobile-img" : "about-img"}
         />
       </div>
       <div className="width-100">
-        <p className={`about-txt mb-8 ${nanum_gothic.className}`}>
+        <p
+          className={
+            isMobile
+              ? `mobile-txt ${nanum_gothic.className}`
+              : `about-txt mb-8 ${nanum_gothic.className}`
+          }
+        >
           안녕하세요, 박가인입니다. 웹 개발에 대한 열정과 끊임없는 학습에
           자부심을 가진 신입 프론트엔드 개발자입니다.저는 커뮤니케이션과 협업을
           중요하게 생각합니다.항상 새로운 기술과 동향에 관심을 가지며, 끊임없이
@@ -33,11 +37,11 @@ const About = () => {
         </p>
         <div className="mt-10">
           <h4>기술스택</h4>
-          <DiJavascript1 size={40} />
-          <DiReact size={40} />
-          <DiNodejsSmall size={40} />
-          <DiMysql size={40} />
-          <DiMongodb size={40} />
+          <DiJavascript1 size={isMobile ? 20 : 40} />
+          <DiReact size={isMobile ? 20 : 40} />
+          <DiNodejsSmall size={isMobile ? 20 : 40} />
+          <DiMysql size={isMobile ? 20 : 40} />
+          <DiMongodb size={isMobile ? 20 : 40} />
         </div>
       </div>
     </div>

@@ -15,6 +15,13 @@
 
 .about-img {
   margin-left: 15%;
+  width: 530px;
+  height: 370px;
+}
+
+.mobile-img{
+  width: 185px;
+  height: 140px;
 }
 
 .width-100 {
@@ -28,4 +35,9 @@
 h4:hover{
   text-decoration: underline;
   cursor: text;
+}
+
+.mobile-txt {
+  margin-bottom: 4px;
+  font-size: 0.7rem !important;
 }
