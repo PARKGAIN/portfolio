@@ -14,6 +14,8 @@ TypeScript
 
 ### 🎨 UI 변경
 
+<a href="https://parkgain.tistory.com/55#https://www.parkgaini.com/_(%EC%A0%9C_%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%9E%85%EB%8B%88%EB%8B%A4.)" style="text-decoration : none; font-size:20px; color : white;">UI 개선시 고려한 점</a>
+
 #### before
 <br/>
 <div align="center">
