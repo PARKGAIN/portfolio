@@ -11,4 +11,3 @@ export const open_sans = Open_Sans({
   weight:["300","400","500","600","700"],
   fallback: ["system-ui"]
 })
-
