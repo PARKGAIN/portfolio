@@ -62,6 +62,7 @@ const Page = () => {
           {data.map((data, n) => {
             let position =
               n > index ? "nextCard" : n === index ? "activeCard" : "prevCard";
+            // eslint-disable-next-line react/jsx-key
             return <Card {...data} isMobile={isMobile} cardStyle={position} />;
           })}
           <BiChevronRight

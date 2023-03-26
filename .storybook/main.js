@@ -1,6 +1,8 @@
 module.exports = {
-  "stories": [
-    ""
+  "stories": [{
+    directory: '../components',
+    files: '*.stories.*',
+  }
   ],
   "addons": [
     "@storybook/addon-links",
