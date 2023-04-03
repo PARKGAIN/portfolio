@@ -36,7 +36,7 @@ const About = ({ isMobile }: any) => {
           웹사이트에 방문해 주셔서 감사합니다.
         </p>
         <div className="mt-10">
-          <h4>기술스택</h4>
+          기술스택 :
           <DiJavascript1 size={isMobile ? 20 : 40} />
           <DiReact size={isMobile ? 20 : 40} />
           <DiNodejsSmall size={isMobile ? 20 : 40} />
