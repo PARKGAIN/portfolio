@@ -31,3 +31,7 @@ TypeScript
 <img src="https://user-images.githubusercontent.com/84880886/226880887-db25ab91-8266-4591-a240-39e40c66b956.jpg" width="800"/>
 <img src="https://user-images.githubusercontent.com/84880886/226880901-9f04e476-434d-4695-a1fa-f8e852f810e3.jpg" width="800"/>
 </div>
+
+#### 성능측정결과
+
+<img src="https://user-images.githubusercontent.com/84880886/229675344-5a47d153-cd48-460a-9f3d-d8f06b15a66d.jpg" width="800"/>
