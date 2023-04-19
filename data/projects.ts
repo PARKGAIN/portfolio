@@ -8,6 +8,14 @@ const data = [
         githublink:"https://github.com/sgdevcamp2022/coderunner"
     },
     {
+        image: "/wiki_page.jpg",        
+        title: "wiki_page",
+        description: "위키 페이지입니다.",
+        techstack: "React, TypeScript, Node.js, Express, MongoDB",
+        reference: "위키피디아 홈페이지를 참조하였습니다.",
+        githublink: "https://github.com/PARKGAIN/pgi_WikiPage"
+    },
+    {
         image: "/sg_blog.png",
         title: "sg_blog",
         description: "서버부터 클라이언트까지 혼자 개발한 블로그 프로젝트입니다. reducer를 사용하여 UI 코드와 api 코드를 분리하고자 하였습니다.",
@@ -31,13 +39,6 @@ const data = [
         reference: "Recoil(https://recoiljs.org/ko/docs/introduction/installation)",
         githublink: "https://github.com/PARKGAIN/login"
     },
-    {
-        image: "/board.png",        
-        title: "board",
-        description: "게시판 프로젝트입니다.",
-        techstack: "React, Spring boot, OracleDB",
-        reference: "Cors에러 해결(https://parkgain.tistory.com/25)",
-        githublink: "https://github.com/PARKGAIN/board"
-    },]
+   ]
 
 export default data;
