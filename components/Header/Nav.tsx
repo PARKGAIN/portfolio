@@ -5,11 +5,8 @@ const Nav = () => {
 
   return (
     <Menu inverted>
-      <Menu.Item name="home" active={activeItem === "home"}  />
-      <Menu.Item
-        name="about"
-        active={activeItem === "about"}
-      />
+      <Menu.Item name="home" active={activeItem === "home"} />
+      <Menu.Item name="about" active={activeItem === "about"} />
     </Menu>
   );
 };
