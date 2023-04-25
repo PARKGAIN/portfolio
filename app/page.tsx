@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Script from "next/script";
-import Nav from "../components/Nav/Nav";
+import Nav from "../components/Header/Nav";
 import "../app/globals.css";
 import data from "../data/projects";
 import About from "../components/About/About";
@@ -12,16 +12,16 @@ import Head from "next/head";
 import { useMediaQuery } from "react-responsive";
 
 const Page = () => {
-  const [index, setIndex] = useState(0);
+  let index = 0;
   const slideLeft = () => {
     if (index - 1 >= 0) {
-      setIndex(index - 1);
+      index -= 1;
     }
   };
 
   const slideRight = () => {
     if (index + 1 <= data.length - 1) {
-      setIndex(index + 1);
+      index += 1;
     }
   };
 
@@ -46,7 +46,7 @@ const Page = () => {
       `}
       </Script>
       <div>
-        <Nav isMobile={isMobile} />
+        <Nav />
       </div>
       <section id="projects" className="background">
         <div
@@ -56,7 +56,7 @@ const Page = () => {
         >
           <BiChevronLeft
             className="left slide-icons"
-            onClick={slideLeft}
+            onClick={() => slideLeft()}
             size={30}
           />
           {data.map((data, n) => {
@@ -67,7 +67,7 @@ const Page = () => {
           })}
           <BiChevronRight
             className="right slide-icons"
-            onClick={slideRight}
+            onClick={() => slideRight()}
             size={30}
           />
         </div>
