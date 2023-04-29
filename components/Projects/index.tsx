@@ -1,14 +1,22 @@
 import data from "data/projects";
 import Image from "next/image";
 import React from "react";
-import { Tooltip, Button, List } from "antd";
+import { Tooltip, List, AutoComplete } from "antd";
 import { AiOutlineSearch } from "react-icons/ai";
 
+const options = [{ value: "slack" }, { value: "wiki" }, { value: "blog" }];
 const Projects: React.FC = () => (
   <>
-    <Button type="primary" icon={<AiOutlineSearch />}>
-      Search
-    </Button>
+    <AiOutlineSearch />
+    <AutoComplete
+      style={{ width: 200 }}
+      options={options}
+      placeholder="try to type `b`"
+      filterOption={(inputValue, option) =>
+        option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+      }
+    />
+
     <List
       itemLayout="vertical"
       dataSource={data}
