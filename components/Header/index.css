@@ -1,5 +1,10 @@
-#components-layout-demo-responsive .logo {
-    height: 32px;
-    margin: 16px;
-    background: rgba(255, 255, 255, 0.2);
-  }
+.font-size{
+  font-size: 43px;
+}
+.font-size:hover{
+  color: #3b7cbe;
+}
+
+.margin-top-20{
+  margin-top: 20px;
+}

@@ -1,5 +1,12 @@
+import { karla } from "fonts/font";
+import "../Header/index.css";
 const Header = () => {
-  return <div>Parkgain</div>;
+  return (
+    <div className={`margin-top-20 font-size ${karla.className}`}>
+      Hello,
+      <br />I am parkgain~
+    </div>
+  );
 };
 
 export default Header;
