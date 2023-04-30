@@ -3,14 +3,14 @@ const data = [
         image: "/slack.png",
         title: "slack",
         description: "crud 외의 기능을 개발할 수 있고 팀원들에게 익숙한 협업툴인 slack을 클론코딩한 팀프로젝트입니다.",
-        techstack: "React, Recoil, styled-components, sock.js, stompjs, node.js",
+        techstack: "React, Recoil, styled-components, sock.js, stompjs, Node.js",
         reference: "스톰프(https://jeonghwan-kim.github.io/2022/10/31/stomp),\n슬랙클론강의(https://github.com/ZeroCho/sleact)",
         githublink:"https://github.com/sgdevcamp2022/coderunner"
     },
     {
         image: "/wiki_page.jpg",        
         title: "wiki_page",
-        description: "위키 페이지입니다.",
+        description: "기업 사전 과제로 개발한 위키 페이지입니다.",
         techstack: "React, TypeScript, Node.js, Express, MongoDB",
         reference: "위키피디아 홈페이지를 참조하였습니다.",
         githublink: "https://github.com/PARKGAIN/pgi_WikiPage"
@@ -18,8 +18,8 @@ const data = [
     {
         image: "/sg_blog.png",
         title: "sg_blog",
-        description: "서버부터 클라이언트까지 혼자 개발한 블로그 프로젝트입니다. reducer를 사용하여 UI 코드와 api 코드를 분리하고자 하였습니다.",
-        techstack: "React, Redux, node.js, MySQL",
+        description: "reducer와 커스텀훅을 사용하여 UI 코드와 api 코드를 분리하고자 하였습니다.",
+        techstack: "React, Redux, Node.js, MySQL",
         reference: "텍스트에디터라이브러리(https://velog.io/@holim0/React-Quill-사용해보기),\nNginx(https://juneyr.dev/nginx-basicshttps://jizard.tistory.com/308),\n이미지서버(https://seoyun-is-connecting-the-dots.tistory.com/313)",
         githublink: "https://github.com/PARKGAIN/sg_blog"
     },
