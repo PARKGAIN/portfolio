@@ -7,11 +7,11 @@ import { AiOutlineSearch } from "react-icons/ai";
 const options = [{ value: "slack" }, { value: "wiki" }, { value: "blog" }];
 const Projects: React.FC = () => (
   <>
-    <AiOutlineSearch />
+    <AiOutlineSearch style={{ marginLeft: "30px" }} />
     <AutoComplete
       style={{ width: 200 }}
       options={options}
-      placeholder="try to type `b`"
+      placeholder="search projects"
       filterOption={(inputValue, option) =>
         option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
       }

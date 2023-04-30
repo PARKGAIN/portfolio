@@ -11,7 +11,7 @@ const Page = () => {
         <Header />
         <Space wrap>
           <Button type="primary" href="/projects">
-            포트폴리오 보기
+            포트폴리오 보러가기
           </Button>
         </Space>
         <About />

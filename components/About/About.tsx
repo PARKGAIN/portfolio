@@ -1,22 +1,23 @@
 import React from "react";
 import { Card } from "antd";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const { Meta } = Card;
 const About = () => {
   return (
-    <div>
+    <motion.div animate={{ y: [80, 0] }} transition={{ delay: 0.9 }}>
       <Card
         hoverable
-        style={{ width: 250 }}
+        style={{ width: 280 }}
         cover={<Image src={"/profile.jpg"} alt={"my profile"} />}
       >
         <Meta
-          title="긍정적인 가치를 전하고 싶은 개발자 박가인입니다"
-          description=""
+          title=""
+          description="긍정적인 가치를 전하고 싶은 개발자 박가인입니다"
         />
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
