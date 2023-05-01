@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <motion.div animate={{ y: [80, 0] }} transition={{ delay: 1.5 }}>
+    <motion.div animate={{ y: [80, 0] }} transition={{ delay: 1.0 }}>
       <Card style={{ width: 340 }}>
         <h3 className={nanum_gothic.className}>contact</h3>
         <br />

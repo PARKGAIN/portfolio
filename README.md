@@ -18,8 +18,7 @@
 
 ### 🙆‍♀️ 프로젝트 하면서 해결한 문제
 
-useState,useEffect를 사용하면 서버사이드 렌더링이 되지 않아서 useState를 사용해서 개발한 scroll-spy를 없애고, 웹 사이트로 모바일환경에서도 사용할 수 있도록 width를 조절하여 UI를 개선하였습니다.
-현재는 검색 기능을 개발하는 중입니다.
+useState,useEffect를 사용하면 "use client"를 선언해야하고 결국에 서버사이드 렌더링이 되지 않아서 컴포넌트에서 상태관리를 어떻게 할지 생각하다가 useReducer로 useState를 대체할 수 있다는 것을 알게되었습니다. 검색기능을 구현할 때 useReducer를 사용하여 projectPage 컴포넌트에서 Projects라는 컴포넌트(프로젝트 목록)로 내려줄 data의 상태를 관리할 수 있었습니다. 
 
 ### 🎨 UI (<a href="https://parkgain.tistory.com/55#https://www.parkgaini.com/_(%EC%A0%9C_%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%9E%85%EB%8B%88%EB%8B%A4.)" style="text-decoration : none; font-size:20px; color : white;">UI 개선시 고려한 점</a>)
 
