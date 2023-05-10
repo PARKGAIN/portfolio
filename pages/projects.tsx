@@ -1,5 +1,5 @@
 import Projects from "components/Projects";
-import "../app/globals.css";
+import "./index.css";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Link from "next/link";
 import data from "data/projects";

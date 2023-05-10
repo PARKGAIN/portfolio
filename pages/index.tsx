@@ -1,6 +1,6 @@
 import Contact from "components/Contact";
 import Header from "components/Header";
-import "../app/globals.css";
+import "./index.css";
 import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";

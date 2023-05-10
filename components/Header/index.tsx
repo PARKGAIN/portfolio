@@ -1,4 +1,4 @@
-import { karla } from "fonts/font";
+import { karla } from "./font";
 import "../Header/index.css";
 
 const Header = () => {
