@@ -6,6 +6,7 @@ export default function Head() {
       <meta name="description" content="developer parkgain portfolio" />
       <meta name="keywords" content="박가인, parkgain,개발자" />
       <link rel="icon" href="/logo.png" />
+      <link rel="manifest" href="/manifest.json" />
     </>
   );
 }
