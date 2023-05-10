@@ -37,3 +37,7 @@ next-env.d.ts
 
 yarn.lock
 package-lock.json
+
+#PWA
+**/public/sw.js
+**/public/workbox-*.js
