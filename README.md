@@ -4,7 +4,7 @@
 
 ### 🛠 기술스택 
 
-- nextjs v13
+- Nextjs v13
 - TypeScript
 - JavaScript
 - Framer-motion
@@ -26,6 +26,7 @@ useState,useEffect를 사용하면 "use client"를 선언해야하고 결국에 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/84880886/235331760-31a8f65f-395f-445f-86d6-ed7cf7486a97.gif"/>
 </div>
+
 - 1st UI
 <br/>
 <div align="center">
@@ -44,5 +45,5 @@ useState,useEffect를 사용하면 "use client"를 선언해야하고 결국에 
 
 #### 성능측정결과
 <div align="center">
-<img src="https://user-images.githubusercontent.com/84880886/229675344-5a47d153-cd48-460a-9f3d-d8f06b15a66d.jpg" width="600"/>
+<img src="https://github.com/PARKGAIN/portfolio/assets/84880886/e0e18df9-9e02-4e5c-94fa-9b4b2fa61fae" width="600"/>
 </div>
