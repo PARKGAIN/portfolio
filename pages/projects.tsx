@@ -41,7 +41,7 @@ const ProjectPage = () => {
     <div className="background">
       <div className="page_container">
         <Link href={"/"}>
-          <AiOutlineArrowLeft size={20} />
+          <AiOutlineArrowLeft size={20} color={"gray"} />
         </Link>
         <AiOutlineSearch size={17} style={{ marginLeft: "10px" }} />
         <input
