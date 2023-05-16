@@ -30,7 +30,7 @@ const ProjectPage = () => {
   }
   const [state, dispatch] = useReducer(reducer, data);
 
-  const onSearch = useCallback((event: any) => {
+  const onSearch = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "CHANGE_INPUT",
       payload: event.target.value,
