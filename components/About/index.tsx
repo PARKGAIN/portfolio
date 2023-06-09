@@ -6,6 +6,11 @@ import "./index.css";
 const { Meta } = Card;
 
 const About = () => {
+  const descriptionArr = [
+    "긍정적인 가치를 전하고 싶은 개발자 박가인입니다.",
+    " 지속가능한 개발자가 제 목표입니다.",
+  ];
+
   return (
     <motion.div
       animate={{ y: [80, 0] }}
@@ -14,11 +19,13 @@ const About = () => {
     >
       <Card
         hoverable
-        style={{ width: 307, marginTop: "30px", marginBottom: "13px" }}
+        style={{ width: 305, marginTop: "29px", marginBottom: "13px" }}
         cover={<Image src={"/profile.jpg"} alt={"my profile"} sizes={"300"} />}
       >
         <Meta
-          description="긍정적인 가치를 전하고 싶은 개발자 박가인입니다.<br/>지속가능한 개발자가 되는 것이 목표입니다."
+          description={descriptionArr.map((desc) => (
+            <p key={`${desc}-`}>{desc}</p>
+          ))}
           className="txt"
         />
       </Card>
