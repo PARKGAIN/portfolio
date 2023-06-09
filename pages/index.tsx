@@ -4,8 +4,13 @@ import "./index.css";
 import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";
+import { useState } from "react";
 
 const Page = () => {
+  const [isButtonClicked, setIsButtonClicked] = useState("");
+  const handleButtonClick = () => {
+    setIsButtonClicked("padding");
+  };
   return (
     <>
       <NextSeo
@@ -22,7 +27,12 @@ const Page = () => {
         <div className="page_container flex-container">
           <Header />
           <Space wrap>
-            <Button type="primary" href="/projects">
+            <Button
+              type="primary"
+              href="/projects"
+              onClick={handleButtonClick}
+              className={isButtonClicked}
+            >
               포트폴리오 보러가기
             </Button>
           </Space>
