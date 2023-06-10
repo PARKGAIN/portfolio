@@ -2,40 +2,12 @@ import Projects from "components/Projects";
 import "./index.css";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Link from "next/link";
-import data from "data/projects";
-import { useCallback, useReducer } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { Project } from "types/types";
+import useProjectSearch from "hooks/useProjectSearch";
+import data from "data/projects";
 
 const ProjectPage = () => {
-  function reducer(state: Project[], action: any) {
-    switch (action.type) {
-      case "CHANGE_INPUT":
-        const filteredData = data.filter(
-          (project) =>
-            project.title
-              .toLowerCase()
-              .includes(action.payload.toLowerCase()) ||
-            project.description
-              .toLowerCase()
-              .includes(action.payload.toLowerCase()) ||
-            project.techstack
-              .toLowerCase()
-              .includes(action.payload.toLowerCase())
-        );
-        return filteredData;
-      default:
-        return state;
-    }
-  }
-  const [state, dispatch] = useReducer(reducer, data);
-
-  const onSearch = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({
-      type: "CHANGE_INPUT",
-      payload: event.target.value,
-    });
-  }, []);
+  const { state, onSearch } = useProjectSearch(data);
 
   return (
     <div className="background">
