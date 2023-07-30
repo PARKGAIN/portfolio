@@ -7,8 +7,7 @@ const { Meta } = Card;
 
 const About = () => {
   const descriptionArr = [
-    "긍정적인 가치를 전하고 싶은 개발자 박가인입니다.",
-    " 지속가능한 개발자가 제 목표입니다.",
+    "개발생산성을 높이기 위해 노력하는 개발자 박가인입니다.",
   ];
 
   return (

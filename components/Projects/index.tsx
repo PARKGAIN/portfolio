@@ -17,8 +17,8 @@ const Projects: React.FC<{ data: Project[] }> = ({ data }): JSX.Element => {
               title={<a href={item.githublink}>{item.title}</a>}
               description={item.description}
             />
-            <List.Item.Meta description={`기술스택 : ${item.techstack}`} />
-            <List.Item.Meta description={`참고한 자료들 : ${item.reference}`} />
+            <List.Item.Meta description={`기술 스택 : ${item.techstack}`} />
+            <List.Item.Meta description={`참고 자료: ${item.reference}`} />
             <Link href={`${item.githublink}`}>
               <SiGithub size={20} />
             </Link>
