@@ -19,7 +19,15 @@ const About = () => {
       <Card
         hoverable
         style={{ width: 305, marginTop: "29px", marginBottom: "13px" }}
-        cover={<Image src={"/profile.jpg"} alt={"my profile"} sizes={"300"} />}
+        cover={
+          <Image
+            src={"/profile.jpg"}
+            alt={"my profile"}
+            sizes={"300"}
+            width={300}
+            height={250}
+          />
+        }
       >
         <Meta
           description={descriptionArr.map((desc) => (
