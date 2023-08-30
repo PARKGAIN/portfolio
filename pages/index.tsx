@@ -4,8 +4,7 @@ import "./index.css";
 import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";
-import { useEffect, useState } from "react";
-import { sendChat } from "./api/sendChat";
+import { useState } from "react";
 
 const Page = () => {
   const [isButtonClicked, setIsButtonClicked] = useState("");
