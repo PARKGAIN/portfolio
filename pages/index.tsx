@@ -4,13 +4,15 @@ import "./index.css";
 import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { sendChat } from "./api/sendChat";
 
 const Page = () => {
   const [isButtonClicked, setIsButtonClicked] = useState("");
   const handleButtonClick = () => {
     setIsButtonClicked("padding");
   };
+
   return (
     <>
       <NextSeo
