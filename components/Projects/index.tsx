@@ -12,7 +12,7 @@ const Projects: React.FC<{ data: Project[] }> = ({ data }): JSX.Element => {
         dataSource={data}
         renderItem={(item, index) => (
           <List.Item>
-            <Image src={item.image} alt={item.title} width={280} />
+            <Image src={item.image} alt={item.title} width={280} height={150} />
             <List.Item.Meta
               title={<a href={item.githublink}>{item.title}</a>}
               description={item.description}
