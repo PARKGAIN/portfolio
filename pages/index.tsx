@@ -5,19 +5,12 @@ import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";
 import { useState } from "react";
-import { sendChat } from "features/sendChat/api";
 
 const Page = () => {
   const [isButtonClicked, setIsButtonClicked] = useState("");
   const handleButtonClick = () => {
     setIsButtonClicked("padding");
   };
-
-  const send = async () => {
-    await sendChat().then((res) => console.log(res));
-  };
-
-  send();
 
   return (
     <>
