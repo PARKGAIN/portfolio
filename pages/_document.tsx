@@ -6,6 +6,10 @@ export default function Document() {
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fff" />
+        <meta name="keywords" content="frontend,protfolio,개발자 포트폴리오" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="개발자 박가인 포트폴리오" />
+        <meta property="twitter:url" content="https://www.parkgaini.com/" />
       </Head>
       <body>
         <Main />
