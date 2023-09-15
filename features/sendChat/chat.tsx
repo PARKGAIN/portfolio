@@ -11,7 +11,7 @@ const SendChatUI = () => {
 
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      setMessages(inputValue);
+      setMessages([...messages, inputValue]);
       setInputValue("");
     }
   };
