@@ -5,6 +5,7 @@ import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";
 import { useState } from "react";
+import Link from "next/link";
 
 const Page = () => {
   const [isButtonClicked, setIsButtonClicked] = useState("");

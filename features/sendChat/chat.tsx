@@ -1,17 +1,18 @@
 import { useState } from "react";
 import "./index.css";
+import { SendOutlined } from "@ant-design/icons";
 
 const SendChatUI = () => {
-  const [messages, setMessages] = useState("");
+  const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     setInputValue(e.target.value);
   };
 
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      setMessages([...messages, inputValue]);
+      // setMessages([...messages, inputValue]);
       setInputValue("");
     }
   };
@@ -32,10 +33,12 @@ const SendChatUI = () => {
           onChange={handleInputChange}
           placeholder="Type your message..."
         />
-        <button onClick={handleSendMessage}>Send</button>
+        <button onClick={handleSendMessage}>
+          <SendOutlined rev={""} />
+        </button>
       </div>
     </div>
   );
 };
-// ffc1cc
+
 export default SendChatUI;
