@@ -41,6 +41,6 @@
     height :2.5em ;  
   }
 
-/* .chat-input button{
-    margin-left:.5em ;
-} */
+.chat-input button{
+    background-color: none;
+} 

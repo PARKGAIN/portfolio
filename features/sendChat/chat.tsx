@@ -1,24 +1,33 @@
 import { useState } from "react";
 import "./index.css";
 import { SendOutlined } from "@ant-design/icons";
+import { sendChat } from "./api";
+import { useQuery } from "@tanstack/react-query";
 
-const SendChatUI = () => {
-  const [messages, setMessages] = useState([]);
+export const SendChatUI = () => {
+  const [messages, setMessages] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
+  const userId = prompt("닉네임을 적어주세요") || "익명";
+  const { status, data, error, isFetching } = useQuery(["data"], async () => {
+    const data = await sendChat(userId, inputValue);
+    return data;
+    console.log(data);
+  });
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      // setMessages([...messages, inputValue]);
+      setMessages([...messages, inputValue]);
       setInputValue("");
     }
   };
 
   return (
     <div className="chat-container">
+      <div>{userId}</div>
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index} className="message">
@@ -31,7 +40,7 @@ const SendChatUI = () => {
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          placeholder="Type your message..."
+          placeholder=" Type your message..."
         />
         <button onClick={handleSendMessage}>
           <SendOutlined rev={""} />
@@ -40,5 +49,3 @@ const SendChatUI = () => {
     </div>
   );
 };
-
-export default SendChatUI;

@@ -24,8 +24,8 @@ const About = () => {
             src={"/profile.jpg"}
             alt={"my profile"}
             sizes={"300"}
-            width={300}
-            height={250}
+            width={280}
+            height={230}
           />
         }
       >
