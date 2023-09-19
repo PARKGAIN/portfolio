@@ -7,9 +7,8 @@ import { useQuery } from "@tanstack/react-query";
 export const SendChatUI = () => {
   const [messages, setMessages] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
-  const userId = prompt("닉네임을 적어주세요") || "익명";
   const { status, data, error, isFetching } = useQuery(["data"], async () => {
-    const data = await sendChat(userId, inputValue);
+    const data = await sendChat("익명", inputValue);
     return data;
     console.log(data);
   });
