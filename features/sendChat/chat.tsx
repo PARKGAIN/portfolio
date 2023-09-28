@@ -2,7 +2,21 @@ import { useState } from "react";
 import "./index.css";
 import { SendOutlined } from "@ant-design/icons";
 import { sendChat } from "./api";
-import { useQuery } from "@tanstack/react-query";
+import {
+  useQuery,
+  QueryClientProvider,
+  QueryClient,
+} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+export default function Provider() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <SendChatUI />
+    </QueryClientProvider>
+  );
+}
 
 export const SendChatUI = () => {
   const [messages, setMessages] = useState<string[]>([]);
@@ -26,7 +40,7 @@ export const SendChatUI = () => {
 
   return (
     <div className="chat-container">
-      <div>{userId}</div>
+      <div>{"익명"}</div>
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index} className="message">
