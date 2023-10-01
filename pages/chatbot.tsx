@@ -1,4 +1,4 @@
-import { SendChatUI } from "features/sendChat/chat";
+import SendChatUI from "../features/sendChat/chat";
 import "./index.css";
 import React from "react";
 

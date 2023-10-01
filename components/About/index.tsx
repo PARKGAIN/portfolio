@@ -6,9 +6,7 @@ import "./index.css";
 const { Meta } = Card;
 
 const About = () => {
-  const descriptionArr = [
-    "개발생산성을 높이기 위해 노력하는 개발자 박가인입니다.",
-  ];
+  const descriptionArr = ["안녕하세요", "성장이 고픈 개발자 박가인입니다"];
 
   return (
     <motion.div
@@ -21,11 +19,11 @@ const About = () => {
         style={{ width: 305, marginTop: "29px", marginBottom: "13px" }}
         cover={
           <Image
-            src={"/profile.jpg"}
+            src={"/newprofile.jpg"}
             alt={"my profile"}
-            sizes={"300"}
-            width={280}
-            height={230}
+            sizes={"250"}
+            width={200}
+            height={260}
           />
         }
       >

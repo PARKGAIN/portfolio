@@ -7,13 +7,14 @@ export const sendChat = async (userId: string, details: string) => {
   },
   body: JSON.stringify({
     "userId" : userId,
-    "timestamp" : new Date(),
+    "timestamp" : new Date().getTime(),
     "content": [{ 
       "type": "text",
       "data": {
           "details": details
       }
     }],
+    "event":"send"
   })
   };
   

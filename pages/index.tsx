@@ -5,8 +5,8 @@ import { Button, Space } from "antd";
 import About from "components/About";
 import { NextSeo } from "next-seo";
 import { useState } from "react";
-import Link from "next/link";
-
+import { FloatButton } from "antd";
+import { CommentOutlined } from "@ant-design/icons";
 const Page = () => {
   const [isButtonClicked, setIsButtonClicked] = useState("");
   const handleButtonClick = () => {
@@ -40,6 +40,11 @@ const Page = () => {
           </Space>
           <About />
           <Contact />
+          <FloatButton
+            href="/chatbot"
+            description={"chatbot"}
+            icon={<CommentOutlined rev={""} />}
+          />
         </div>
       </div>
     </>

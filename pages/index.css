@@ -81,11 +81,11 @@ li {
 }
 
 .background {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../public/back.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../public/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .padding {

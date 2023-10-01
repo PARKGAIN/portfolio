@@ -3,30 +3,29 @@ import "./index.css";
 import { SendOutlined } from "@ant-design/icons";
 import { sendChat } from "./api";
 import {
-  useQuery,
+  useMutation,
   QueryClientProvider,
   QueryClient,
 } from "@tanstack/react-query";
+import { Button } from "antd";
+import Loading from "../../app/loading";
 
 const queryClient = new QueryClient();
 
-export default function Provider() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <SendChatUI />
-    </QueryClientProvider>
-  );
-}
-
-export const SendChatUI = () => {
+const SendChatUI = () => {
   const [messages, setMessages] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
-  const { status, data, error, isFetching } = useQuery(["data"], async () => {
-    const data = await sendChat("익명", inputValue);
-    return data;
-    console.log(data);
-  });
-
+  const [username, setUsername] = useState("");
+  const [isNicknameSetted, setIsNicknameSetted] = useState<boolean>(false);
+  const { mutate, isLoading } = useMutation(
+    () => sendChat(username, inputValue),
+    {
+      onSuccess: (data) => {
+        setMessages([...messages, data.content[0].data.details]);
+        setInputValue("");
+      },
+    }
+  );
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
@@ -34,13 +33,51 @@ export const SendChatUI = () => {
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
       setMessages([...messages, inputValue]);
-      setInputValue("");
+      mutate();
     }
   };
 
-  return (
+  const nicknameSetBtnClick = () => {
+    if (username.trim() === "") {
+      setUsername("익명");
+    }
+    setIsNicknameSetted(true);
+  };
+  const activeEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSendMessage();
+    }
+  };
+  return isLoading ? (
+    <Loading />
+  ) : (
     <div className="chat-container">
-      <div>{"익명"}</div>
+      <div>
+        {!isNicknameSetted ? (
+          <input
+            className="nickname__input"
+            value={username}
+            placeholder={"닉네임을설정해주세요.기본은 익명"}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        ) : (
+          <div>{username}</div>
+        )}
+        <Button
+          className="nickname__submit__btn"
+          size={"small"}
+          onClick={nicknameSetBtnClick}
+        >
+          설정
+        </Button>
+        <Button
+          className="nickname__submit__btn"
+          size={"small"}
+          onClick={() => setIsNicknameSetted(false)}
+        >
+          취소
+        </Button>
+      </div>
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index} className="message">
@@ -50,15 +87,28 @@ export const SendChatUI = () => {
       </div>
       <div className="chat-input">
         <input
+          className="chat-input__input"
           type="text"
           value={inputValue}
           onChange={handleInputChange}
+          onKeyDown={(e) => activeEnter(e)}
           placeholder=" Type your message..."
         />
-        <button onClick={handleSendMessage}>
+        <button className="chat__send__btn" onClick={handleSendMessage}>
           <SendOutlined rev={""} />
         </button>
       </div>
     </div>
   );
 };
+
+const hof = (WrappedComponent: any) => {
+  // eslint-disable-next-line react/display-name
+  return (props: any) => (
+    <QueryClientProvider client={queryClient}>
+      <WrappedComponent />
+    </QueryClientProvider>
+  );
+};
+
+export default hof(SendChatUI);
