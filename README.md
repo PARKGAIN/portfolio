@@ -34,7 +34,7 @@
 
 - now
 <div align="center">
-<img src="https://user-images.githubusercontent.com/84880886/235331760-31a8f65f-395f-445f-86d6-ed7cf7486a97.gif" width="570"/>
+<img src="https://github.com/PARKGAIN/portfolio/assets/84880886/3d8d959b-75b3-4cf2-a70b-d95e5f8a1d4f" width="570"/>
 </div>
 - before
 <div align="center">
