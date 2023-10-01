@@ -31,11 +31,11 @@
 - 지속적인 유지보수
 ### 🎨 UI (<a href="https://parkgain.tistory.com/55#https://www.parkgaini.com/_(%EC%A0%9C_%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%9E%85%EB%8B%88%EB%8B%A4.)" style="text-decoration : none; font-size:20px; color : white;">UI 개선시 고려한 점</a>)
 
-
 - now
 <div align="center">
 <img src="https://github.com/PARKGAIN/portfolio/assets/84880886/3d8d959b-75b3-4cf2-a70b-d95e5f8a1d4f" width="570"/>
 </div>
+
 - before
 <div align="center">
 <img src="https://user-images.githubusercontent.com/84880886/235331760-31a8f65f-395f-445f-86d6-ed7cf7486a97.gif" width="570"/>
