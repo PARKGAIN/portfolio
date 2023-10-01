@@ -18,6 +18,6 @@ export const sendChat = async (userId: string, details: string) => {
   })
   };
   
-  const response = await fetch(process.env.NEXT_PUBLIC_BASEURL as string, requestOptions);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASEURL}` as string, requestOptions);
   return await response.json();
   };
