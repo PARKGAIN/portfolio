@@ -1,94 +1,101 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        Fira Sans,
+        Droid Sans,
+        Helvetica Neue,
+        sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 a:hover {
-  color: #f2a154;
+    color: #f2a154;
 }
 
 ul,
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
-
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: black;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  body {
-    font-size: 13px;
-  }
+    body {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-height: 830px) {
-  .page_container {
-    height: 100%;
-    position: fixed;
-    overflow: hidden;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    overflow-y: scroll;
-  }
+    .page_container {
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (max-width: 414px) {
-  .page_container {
-    width: 100vw;
-    overflow-y: scroll;
-  }
+    .page_container {
+        width: 100vw;
+        overflow-y: scroll;
+    }
 }
 
 .page_container {
-  width: 400px;
-  height: 100%;
-  margin: 0 auto;
-  background-color: #fff;
-  overflow-y: scroll;
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow-y: scroll;
 }
 
 .flex-container {
-  display: flex;
-  align-content: center;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .background {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../public/back.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../public/back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .padding {
-  padding: 13px 27px;
+    padding: 13px 27px;
 }
-
