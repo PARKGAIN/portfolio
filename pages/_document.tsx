@@ -16,6 +16,10 @@ export default function Document() {
                     property="twitter:url"
                     content="https://www.parkgaini.com/"
                 />
+                <meta
+                    name="google-site-verification"
+                    content="OvmB0ypzdXissvlYbc8oLACPGoLHIPTlBRnBNkD6XIw"
+                />
             </Head>
             <body>
                 <Main />
