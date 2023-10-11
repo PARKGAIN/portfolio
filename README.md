@@ -18,7 +18,7 @@
 
 ### 🙆‍♀️ 프로젝트를 하면서 성장한 부분
 
--   SSR을 적용하고자 시도하는 과정에서 SSR,ISR,SSG가 무엇인지 공부했습니다 https://parkgain.tistory.com/71
+-   SSG이지만 SSR을 적용하고자 시도하는 과정에서 SSR,ISR,SSG가 무엇인지 공부했습니다 https://parkgain.tistory.com/71
 -   네이버 챗봇 api를 연동하면서 isLoading으로 로딩중 UI를 보여줄 때 선언적으로 코드를 작성할 수 있는 장점이 있어 react query를 사용하였습니다
 
 ### 🚩 프로젝트의 목표
