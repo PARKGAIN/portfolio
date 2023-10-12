@@ -1,4 +1,4 @@
-export type Project = {
+type Project = {
     image: string
     title: string
     description: string
