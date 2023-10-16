@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { List } from 'antd'
-import { Project } from 'types/types'
 import { SiGithub } from 'react-icons/si'
 import Link from 'next/link'
 

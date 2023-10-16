@@ -100,9 +100,9 @@ const SendChatUI = () => {
     )
 }
 
-const hof = (WrappedComponent: any) => {
+const hof = (WrappedComponent: unknown) => {
     // eslint-disable-next-line react/display-name
-    return (props: any) => (
+    return (props: Record<string, unknown>) => (
         <QueryClientProvider client={queryClient}>
             <WrappedComponent />
         </QueryClientProvider>
