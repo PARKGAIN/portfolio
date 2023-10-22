@@ -17,15 +17,13 @@ const SendChatUI = () => {
     const [inputValue, setInputValue] = useState('')
     const [username, setUsername] = useState('')
     const [isNicknameSetted, setIsNicknameSetted] = useState<boolean>(false)
-    const { mutate, isLoading } = useMutation(
-        () => sendChat(username, inputValue),
-        {
-            onSuccess: (data) => {
-                setMessages([...messages, data.content[0].data.details])
-                setInputValue('')
-            },
-        }
-    )
+    const { mutate, isPending } = useMutation({
+        mutationFn: () => sendChat(username, inputValue),
+        onSuccess: (data) => {
+            setMessages([...messages, data.content[0].data.details])
+            setInputValue('')
+        },
+    })
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value)
     }
@@ -43,12 +41,13 @@ const SendChatUI = () => {
         }
         setIsNicknameSetted(true)
     }
+
     const activeEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             handleSendMessage()
         }
     }
-    return isLoading ? (
+    return isPending ? (
         <Loading />
     ) : (
         <div className="chat-container">
@@ -100,7 +99,7 @@ const SendChatUI = () => {
     )
 }
 
-const hof = (WrappedComponent: unknown) => {
+const hof = (WrappedComponent: React.ComponentType) => {
     // eslint-disable-next-line react/display-name
     return (props: Record<string, unknown>) => (
         <QueryClientProvider client={queryClient}>
