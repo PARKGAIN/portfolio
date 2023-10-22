@@ -7,6 +7,7 @@ import { NextSeo } from 'next-seo'
 import { useState } from 'react'
 import { FloatButton } from 'antd'
 import { CommentOutlined } from '@ant-design/icons'
+
 const Page = () => {
     const [isButtonClicked, setIsButtonClicked] = useState('')
     const handleButtonClick = () => {
@@ -25,7 +26,7 @@ const Page = () => {
                     description: '개발자 박가인 포트폴리오',
                 }}
             />
-            <div className="background">
+            <div className="background" style={{ position: 'relative' }}>
                 <div className="page_container flex-container">
                     <Header />
                     <Space wrap>
@@ -40,7 +41,7 @@ const Page = () => {
                     <About />
                     <Contact />
                     <FloatButton
-                        style={{"position": "absolute"}}
+                        style={{ position: 'absolute' }}
                         href="/chatbot"
                         description={'chatbot'}
                         icon={<CommentOutlined rev={''} />}

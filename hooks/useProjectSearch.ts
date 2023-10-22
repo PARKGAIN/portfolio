@@ -1,5 +1,4 @@
 import { useReducer, useCallback } from 'react'
-import { Project } from 'types/types'
 import data from 'data/projects'
 
 type Action = {
