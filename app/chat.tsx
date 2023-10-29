@@ -8,7 +8,7 @@ import {
     QueryClient,
 } from '@tanstack/react-query'
 import { Button } from 'antd'
-import Loading from '../../app/loading'
+import Loading from './loading'
 
 const queryClient = new QueryClient()
 

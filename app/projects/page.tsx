@@ -1,5 +1,6 @@
+'use client'
 import Projects from 'components/Projects'
-import './index.css'
+import '../index.css'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import Link from 'next/link'
 import { AiOutlineSearch } from 'react-icons/ai'

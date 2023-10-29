@@ -1,10 +1,24 @@
-/** @type {import('next').NextConfig} */
-const withPWA = require('next-pwa')({
-    dest: 'public',
-})
-
-module.exports = withPWA({
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
     experimental: {
-        appDir: true,
+        typedRoutes: true,
     },
-})
+    pwa: {
+        runtimeCaching,
+        dest: 'public',
+    },
+}
+
+const buildConfig = (_phase) => {
+    const plugins = [withPWA]
+    const config = plugins.reduce((acc, next) => next(acc), {
+        ...nextConfig,
+    })
+    return config
+}
+
+module.exports = buildConfig

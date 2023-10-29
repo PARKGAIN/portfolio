@@ -1,8 +1,9 @@
-import SendChatUI from '../features/sendChat/chat'
-import './index.css'
+'use client'
+import SendChatUI from '../chat'
+import '../index.css'
 import React from 'react'
 
-function chatbot() {
+function Chatbot() {
     return (
         <div className="background">
             <div className="page_container flex-container">
@@ -12,4 +13,4 @@ function chatbot() {
     )
 }
 
-export default chatbot
+export default Chatbot

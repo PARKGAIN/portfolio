@@ -1,4 +1,4 @@
-export const sendChat = async (userId: string, details: string) => {
+export async function sendChat(userId: string, details: string) {
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -24,5 +24,5 @@ export const sendChat = async (userId: string, details: string) => {
         `${process.env.NEXT_PUBLIC_BASEURL}` as string,
         requestOptions
     )
-    return await response.json()
+    return response.json()
 }
