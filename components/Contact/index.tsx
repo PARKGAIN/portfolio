@@ -16,13 +16,6 @@ const Contact = () => {
                         pgi082247@gmail.com
                     </span>
                 </Link>
-                <br />
-                <Link href="https://parkgain.tistory.com/">
-                    <PencilIcon width={22} />
-                    <span style={{ fontSize: '16px', marginLeft: '4px' }}>
-                        https://parkgain.tistory.com/
-                    </span>
-                </Link>
             </Card>
         </motion.div>
     )
