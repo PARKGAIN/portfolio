@@ -6,15 +6,16 @@
 
 ### 🛠 기술스택
 
--   Next.js v14
+-   Next.js v14 (app route)
 -   TypeScript
 -   JavaScript
 -   Antd
 
-### 🙆‍♀️ 프로젝트를 하면서 성장한 부분
+### 🙆‍♀️ 프로젝트를 하며 고민한 부분
 
 -   SSG이지만 SSR을 적용하고자 시도하는 과정에서 SSR,ISR,SSG가 무엇인지 공부했습니다 https://parkgain.tistory.com/71
--   네이버 챗봇 api를 연동하면서 isLoading으로 로딩중 UI를 보여줄 때 선언적으로 코드를 작성할 수 있는 장점이 있어 react query를 사용하였습니다
+-   네이버 챗봇 api를 연동하면서 선언적으로 코드를 작성할 수 있는 장점이 있어 react query를 사용하였습니다
+-   개인용 프로젝트라 vercel 무료 요금제를 사용하고 있으나, 비지니스로 전환시 요금을 생각해서 aws 서비스를 사용해보고자 했으나, 정적사이트임에도 app router 사용시 s3가 아닌 EC2와 같은 서비스를 사용해야하기 때문에 vercel을 사용하여 배포중입니다.
 
 ### 🚩 프로젝트의 목표
 
