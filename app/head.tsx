@@ -1,4 +1,4 @@
-export default function Head() {
+function Head() {
     return (
         <>
             <title>parkgain portfolio</title>
@@ -19,3 +19,5 @@ export default function Head() {
         </>
     )
 }
+
+export default Head

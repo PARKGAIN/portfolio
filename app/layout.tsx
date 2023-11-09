@@ -1,6 +1,4 @@
-export default function RootLayout({
-    children,
-}: React.PropsWithChildren<{}>): JSX.Element {
+function RootLayout({ children }: React.PropsWithChildren<{}>): JSX.Element {
     return (
         <html lang="ko">
             {/*
@@ -12,3 +10,5 @@ export default function RootLayout({
         </html>
     )
 }
+
+export default RootLayout

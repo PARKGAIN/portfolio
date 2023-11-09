@@ -1,6 +1,6 @@
 it('api test', async () => {
-    jest.spyOn().mockReturnValueOnce({})
+    jest.spyOn(global, 'fetch').mockResolvedValue()
 
-    const result = await sendChat()
-    expect().toBe('저는 가인님의 챗봇입니다.')
+    const result = await sendChat('익명', '하이')
+    expect(result).toBe('저는 가인님의 챗봇입니다.')
 })
