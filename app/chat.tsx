@@ -17,7 +17,7 @@ const SendChatUI = () => {
     const [inputValue, setInputValue] = useState('')
     const [username, setUsername] = useState('')
     const [isNicknameSetted, setIsNicknameSetted] = useState<boolean>(false)
-    const { mutate, isPending } = useMutation({
+    const { mutate } = useMutation({
         mutationFn: () => sendChat(username, inputValue),
         onSuccess: (data) => {
             setMessages([...messages, data.content[0].data.details])
@@ -47,9 +47,7 @@ const SendChatUI = () => {
             handleSendMessage()
         }
     }
-    return isPending ? (
-        <Loading />
-    ) : (
+    return (
         <div className="chat-container">
             <div>
                 {!isNicknameSetted ? (
