@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import './index.css'
 import { SendOutlined } from '@ant-design/icons'
 import { sendChat } from './api'
@@ -8,7 +8,6 @@ import {
     QueryClient,
 } from '@tanstack/react-query'
 import { Button } from 'antd'
-import Loading from './loading'
 
 const queryClient = new QueryClient()
 

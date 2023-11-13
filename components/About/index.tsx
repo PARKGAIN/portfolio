@@ -3,11 +3,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import './index.css'
 
-const { Meta } = Card
-
 const About = () => {
-    const descriptionArr = ['안녕하세요', '성장이 고픈 개발자 박가인입니다']
-
     return (
         <motion.div
             animate={{ y: [80, 0] }}
@@ -25,12 +21,7 @@ const About = () => {
                         height={260}
                     />
                 }>
-                <Meta
-                    description={descriptionArr.map((desc) => (
-                        <p key={`${desc}-`}>{desc}</p>
-                    ))}
-                    className="txt"
-                />
+                <p>성장이 고픈 개발자 박가인입니다</p>
             </Card>
         </motion.div>
     )
