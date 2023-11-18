@@ -1,13 +1,14 @@
 'use client'
-import SendChatUI from '../chat'
 import '../index.css'
 import React from 'react'
+import { SendChatUI } from 'app/chat'
+import { withReactQueryClient } from 'app/chat'
 
 function Chatbot() {
     return (
         <div className="background">
             <div className="page_container flex-container">
-                <SendChatUI />
+                {withReactQueryClient(SendChatUI)}
             </div>
         </div>
     )

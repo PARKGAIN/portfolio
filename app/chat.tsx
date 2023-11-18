@@ -9,7 +9,7 @@ import {
 } from '@tanstack/react-query'
 import { Button } from 'antd'
 
-const SendChatUI = () => {
+export const SendChatUI = () => {
     const [messages, setMessages] = useState<string[]>([])
     const [inputValue, setInputValue] = useState('')
     const [username, setUsername] = useState('')
@@ -96,12 +96,12 @@ const SendChatUI = () => {
 
 const queryClient = new QueryClient()
 
-const withReactQueryClient = (WrappedComponent: React.ComponentType) => (
+export const withReactQueryClient = (
+    WrappedComponent: React.ComponentType
+): JSX.Element => (
     <QueryClientProvider client={queryClient}>
         <WrappedComponent />
     </QueryClientProvider>
 )
-
-withReactQueryClient.displayName = 'QueryClientProvider'
 
 export default withReactQueryClient(SendChatUI)
