@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: '개발자 포트폴리오',
+    description: '개발자 박가인 포트폴리오',
+}
+
 export default function RootLayout({
     children,
 }: React.PropsWithChildren<{}>): JSX.Element {

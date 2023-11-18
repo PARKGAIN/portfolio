@@ -9,8 +9,6 @@ import {
 } from '@tanstack/react-query'
 import { Button } from 'antd'
 
-const queryClient = new QueryClient()
-
 const SendChatUI = () => {
     const [messages, setMessages] = useState<string[]>([])
     const [inputValue, setInputValue] = useState('')
@@ -53,7 +51,7 @@ const SendChatUI = () => {
                     <input
                         className="nickname__input"
                         value={username}
-                        placeholder={'닉네임을설정해주세요.기본은 익명'}
+                        placeholder="닉네임을설정해주세요.기본은 익명"
                         onChange={(e) => setUsername(e.target.value)}
                     />
                 ) : (
@@ -67,7 +65,7 @@ const SendChatUI = () => {
                 </Button>
                 <Button
                     className="nickname__submit__btn"
-                    size={'small'}
+                    size="small"
                     onClick={() => setIsNicknameSetted(false)}>
                     취소
                 </Button>
@@ -96,13 +94,14 @@ const SendChatUI = () => {
     )
 }
 
-const hof = (WrappedComponent: React.ComponentType) => {
-    // eslint-disable-next-line react/display-name
-    return (props: Record<string, unknown>) => (
-        <QueryClientProvider client={queryClient}>
-            <WrappedComponent />
-        </QueryClientProvider>
-    )
-}
+const queryClient = new QueryClient()
 
-export default hof(SendChatUI)
+const withReactQueryClient = (WrappedComponent: React.ComponentType) => (
+    <QueryClientProvider client={queryClient}>
+        <WrappedComponent />
+    </QueryClientProvider>
+)
+
+withReactQueryClient.displayName = 'QueryClientProvider'
+
+export default withReactQueryClient(SendChatUI)
