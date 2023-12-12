@@ -4,6 +4,7 @@ import { Card } from 'antd'
 import { motion } from 'framer-motion'
 import { AiFillYoutube } from 'react-icons/ai'
 import './index.css'
+
 const Contact = () => {
     return (
         <motion.div animate={{ y: [80, 0] }} transition={{ delay: 1.0 }}>

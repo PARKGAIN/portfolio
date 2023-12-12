@@ -10,8 +10,8 @@ const About = () => {
             transition={{ delay: 0.8 }}
             style={{ margin: '0 auto' }}>
             <Card
+                className="about_card"
                 hoverable
-                style={{ width: 305, marginTop: '29px', marginBottom: '13px' }}
                 cover={
                     <Image
                         src={'/newprofile.jpg'}
@@ -21,7 +21,7 @@ const About = () => {
                         height={260}
                     />
                 }>
-                <p>성장이 고픈 개발자 박가인입니다</p>
+                <p>개발자 박가인입니다</p>
             </Card>
         </motion.div>
     )

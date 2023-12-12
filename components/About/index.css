@@ -2,3 +2,9 @@
     line-height: 1.5;
     letter-spacing: 1px;
 }
+
+.about_card {
+    width: 305;
+    margin-top: '29px';
+    margin-bottom: '13px'
+}
